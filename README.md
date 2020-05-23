@@ -2,6 +2,8 @@
 
 Link Demo: https://evandrogouveia.github.io/exportar-dados-excel-angular/
 
+![alt text](https://github.com/evandrogouveia/exportar-dados-excel-angular/blob/master/src/assets/img/tela-exportar.jpg)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
 ## Development server

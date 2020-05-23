@@ -34,8 +34,22 @@ export class AppComponent implements OnInit {
     this.excelService.saveAsExcelFile(excelBuffer, excelFileName);
   }
 
+  exportAsCsvFile(nomeArquivo, excelFileName: string): void {
+    const worksheet: XLSX.WorkSheet = XLSX.utils.table_to_sheet(this.table.nativeElement);
+
+    const workbook: XLSX.WorkBook = { Sheets: { 'data': worksheet}, SheetNames: ['data'] };
+
+    const excelBuffer: any = XLSX.write(workbook, { bookType: 'csv', type: 'array' });
+
+    this.excelService.saveAsCsvFile(excelBuffer, excelFileName);
+  }
+
   exportAsXLSX(): void {
     this.exportAsExcelFile(this.data, 'estados');
+  }
+
+  exportAsCSV(): void {
+    this.exportAsCsvFile(this.data, 'estados');
   }
 
 }

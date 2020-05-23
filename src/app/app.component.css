@@ -4,3 +4,54 @@
     align-items: center;
     justify-content: center;
 }
+h2 {
+    color: rgb(84, 168, 140);
+}
+table {
+    width: 40%;
+    margin-top: 0px;
+}
+table tr th{
+    border-bottom: 1px solid #aaa;
+    text-align: left;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 12px;
+}
+table tr td{
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+    color: #666;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 12px;
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    margin-bottom: 60px;
+}
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    border: 2px solid rgb(84, 168, 140);
+    background: transparent;
+    outline: none;
+    border-radius: 5px;
+    color: #555;
+    font-weight: 600;
+    padding: 12px 30px;
+    transition: all 0.5s;
+    width: 48%;
+}
+button img{
+    margin-right: 5px;
+    width: 35px;
+}
+button:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}

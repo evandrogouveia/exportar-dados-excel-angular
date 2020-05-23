@@ -6,6 +6,8 @@ const EXCEL_TYPE = 'application/vnd.openxmlformats-officedocument.spreadsheetml.
 
 const EXCEL_EXTENSION = '.xlsx';
 
+const CSV_EXTENSION = '.csv';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -25,5 +27,13 @@ export class ExcelService {
     });
 
     FileSaver(data, fileName + '_export_' + new Date().getTime() + EXCEL_EXTENSION);
+  }
+
+  public saveAsCsvFile(buffer: any, fileName: string): void {
+    const data: Blob = new Blob([buffer], {
+      type: EXCEL_TYPE
+    });
+
+    FileSaver(data, fileName + '_export_' + new Date().getTime() + CSV_EXTENSION);
   }
 }

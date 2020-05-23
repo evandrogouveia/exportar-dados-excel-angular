@@ -1,13 +1,15 @@
 <div class="container-main">
-  <h1>Exportar dados para Excel</h1>
+  <h2>Exportar dados para Excel</h2>
 
-  <button (click)="exportAsXLSX()">EXPORTAR</button>
-  <table #table>
+  <table cellspacing="0" #table>
     <tr>
-      <td>id</td>
-      <td>Sigla</td>
-      <td>Nome</td>
-      <td>Região</td>
+      <th colspan="4" style="text-align: center;">Dados API IBGE</th>
+    </tr>
+    <tr>
+      <th>id</th>
+      <th>Sigla</th>
+      <th>Nome</th>
+      <th>Região</th>
     </tr>
     <tr *ngFor="let uf of data">
       <td>{{uf.id}}</td>
@@ -16,4 +18,8 @@
       <td>{{uf.regiao.nome}}</td>
     </tr>
   </table>
+  <div class="buttons">
+    <button (click)="exportAsXLSX()"><img src="assets/img/icon-excel.png"> EXPORTAR XLSX</button>
+    <button (click)="exportAsCSV()"><img src="assets/img/icon-csv.png"> EXPORTAR CSV</button>
+  </div>
 </div>

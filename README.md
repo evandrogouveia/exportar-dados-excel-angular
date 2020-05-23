@@ -1,6 +1,6 @@
 # ExportarExcelDemo
 
-Link Demo: https://evandrogouveia.github.io/exportar-dados-excel-angular/s
+Link Demo: https://evandrogouveia.github.io/exportar-dados-excel-angular/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
